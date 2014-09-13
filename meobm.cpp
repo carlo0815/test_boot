@@ -50,7 +50,7 @@ nfr4xbm::nfr4xbm()
 	f = fopen("/media/nfr4xboot/NFR4XBooI/.version", "rt");
   	 if (f) {
 		fgets(buf, 256, f);
-		sprintf(meobootver, "--NFR4XBoot-- version %s <NFR4X>", buf);
+		sprintf(nfr4xbootver, "--NFR4XBoot-- version %s <NFR4X>", buf);
       		fclose(f);
    	}
 	strcpy(driver,"[ n/a ]");
