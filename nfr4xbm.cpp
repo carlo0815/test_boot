@@ -47,7 +47,7 @@ nfr4xbm::nfr4xbm()
 	}
 
 
-	f = fopen("/media/nfr4xboot/NFR4XBooI/.version", "rt");
+	f = fopen("/media/nfr4xboot/NFR4XBootI/.version", "rt");
   	 if (f) {
 		fgets(buf, 256, f);
 		sprintf(nfr4xbootver, "--NFR4XBoot-- version %s <NFR4X>", buf);
