@@ -1,10 +1,10 @@
-meobm_SOURCES = meobm.cpp my_fb.cpp png.cpp
+nfr4xbm_SOURCES = nfr4xbm.cpp my_fb.cpp png.cpp
 
-bin_PROGRAMS = meobm
+bin_PROGRAMS = nfr4xbm
 
 ACLOCAL_AMFLAGS = -I m4
 
 INCLUDES = $(FREETYPE_CFLAGS)
 
-meobm_LDADD = -lpng -lfreetype -lz
+nfr4xbm_LDADD = -lpng -lfreetype -lz
 
