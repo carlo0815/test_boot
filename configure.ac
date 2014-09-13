@@ -1,7 +1,7 @@
 #                                               -*- Autoconf -*-
 # Process this file with autoconf to produce a configure script.
 
-AC_INIT(meobm.cpp)
+AC_INIT(nfr4xbm.cpp)
 AM_INIT_AUTOMAKE(meobm,0.1)
 
 # Checks for programs.
