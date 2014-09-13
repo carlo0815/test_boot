@@ -2,7 +2,7 @@
 # Process this file with autoconf to produce a configure script.
 
 AC_INIT(nfr4xbm.cpp)
-AM_INIT_AUTOMAKE(meobm,0.1)
+AM_INIT_AUTOMAKE(nfr4xbm,0.1)
 
 # Checks for programs.
 AC_PROG_CXX
