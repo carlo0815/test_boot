@@ -208,7 +208,7 @@ void nfr4xbm::missionComplete()
 			curimage = imageList[i].name;
 		}
 	}
-	if (FILE *f = fopen("/media/nfr4xboot/NFR4XbootI/.nfr4xboot", "w")){
+	if (FILE *f = fopen("/media/nfr4xboot/NFR4XBootI/.nfr4xboot", "w")){
 		fprintf(f, curimage.c_str());
 		fclose(f);
 	}
@@ -224,14 +224,14 @@ void nfr4xbm::loadImageList()
 	imageList.push_back(image);
 
 
-	DIR *d = opendir("/media/nfr4xboot/NFR4XbootI/");
+	DIR *d = opendir("/media/nfr4xboot/NFR4XBootI/");
 	if (d)
 	{
 		while (struct dirent *e = readdir(d))
 		{
 			if (strcmp(e->d_name, ".") && strcmp(e->d_name, ".."))
 			{
-				std::string name = "/media/nfr4xboot/NFR4XbootI/" + std::string(e->d_name);
+				std::string name = "/media/nfr4xboot/NFR4XBootI/" + std::string(e->d_name);
 				stat(name.c_str(), &s);
 				if (S_ISDIR(s.st_mode))
 				{
@@ -255,7 +255,7 @@ void nfr4xbm::selCurImage()
 	if (lastentry > MAXIMAGES)
 		lastentry = MAXIMAGES;
 
-	FILE *f = fopen("/media/nfr4xboot/NFR4XbootI/.nfr4xboot", "rt");
+	FILE *f = fopen("/media/nfr4xboot/NFR4XBootI/.nfr4xboot", "rt");
    	if (f) {
 		fgets(buf, 100, f);
 		fclose(f);
