@@ -21,8 +21,8 @@
 #include FT_FREETYPE_H
 #include FT_CACHE_H
 #include FT_CACHE_SMALL_BITMAPS_H
--#define FONT "/usr/share/fonts/nmsbd.ttf"
--#endif
+#define FONT "/usr/share/fonts/nmsbd.ttf"
+#endif
 
 
 class fbClass
