@@ -305,7 +305,7 @@ void nfr4xbm::drawmenu()
 
 		if (i == selentry) {
 			if(model == "dm7025")
-				display->FillRect(x, (y - 20), 500, 26, 0, 0, 255);
+				display->FillRect(x, (y - 20), 900, 26, 255, 0, 0);
 			else
 				display->FillRect(x, (y - 20), 500, 26, 0, 0, 255);
 		}
