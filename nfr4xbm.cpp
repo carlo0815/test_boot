@@ -82,7 +82,18 @@ nfr4xbm::nfr4xbm()
 					temps.replace(pos, 1, "");
 				sprintf(driver, "[ %s ]", temps.c_str());
 			}
-			if (strstr(buf, "Package: ini-dvb-modules-inihdp")) {
+			if (strstr(buf, "Package: ini-dvb-modules-ini-900")) {
+				fgets(buf, 256, f);
+				temps = string(buf);
+				pos = temps.find(' ');
+				if(pos != string::npos)
+					 temps = temps.substr(pos);
+				pos = temps.find('\n');
+				if(pos != string::npos)
+					temps.replace(pos, 1, "");
+				sprintf(driver, "[ %s ]", temps.c_str());
+			}
+			if (strstr(buf, "Package: ini-dvb-modules-ini-800")) {
 				fgets(buf, 256, f);
 				temps = string(buf);
 				pos = temps.find(' ');
