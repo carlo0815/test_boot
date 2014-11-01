@@ -126,6 +126,28 @@ nfr4xbm::nfr4xbm()
 					temps.replace(pos, 1, "");
 				sprintf(driver, "[ %s ]", temps.c_str());
 			}
+			if (strstr(buf, "Package: skylake-dvb-modules-hd2400")) {
+				fgets(buf, 256, f);
+				temps = string(buf);
+				pos = temps.find(' ');
+				if(pos != string::npos)
+					 temps = temps.substr(pos);
+				pos = temps.find('\n');
+				if(pos != string::npos)
+					temps.replace(pos, 1, "");
+				sprintf(driver, "[ %s ]", temps.c_str());
+			}
+			if (strstr(buf, "Package: xp-dvb-modules-xp1000 ")) {
+				fgets(buf, 256, f);
+				temps = string(buf);
+				pos = temps.find(' ');
+				if(pos != string::npos)
+					 temps = temps.substr(pos);
+				pos = temps.find('\n');
+				if(pos != string::npos)
+					temps.replace(pos, 1, "");
+				sprintf(driver, "[ %s ]", temps.c_str());
+			}
 			if (strstr(buf, "Package: dreambox-secondstage")) {
 				fgets(buf, 256, f);
 				temps = string(buf);
