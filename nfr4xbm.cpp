@@ -115,6 +115,17 @@ nfr4xbm::nfr4xbm()
 					temps.replace(pos, 1, "");
 				sprintf(driver, "[ %s ]", temps.c_str());
 			}
+			if (strstr(buf, "Package: ini-dvb-modules-inihdx")) {
+				fgets(buf, 256, f);
+				temps = string(buf);
+				pos = temps.find(' ');
+				if(pos != string::npos)
+					 temps = temps.substr(pos);
+				pos = temps.find('\n');
+				if(pos != string::npos)
+					temps.replace(pos, 1, "");
+				sprintf(driver, "[ %s ]", temps.c_str());
+			}
 			if (strstr(buf, "Package: blackbox-dvb-modules-blackbox7405")) {
 				fgets(buf, 256, f);
 				temps = string(buf);
