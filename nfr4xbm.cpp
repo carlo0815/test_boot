@@ -60,7 +60,7 @@ nfr4xbm::nfr4xbm()
 	f = fopen("/var/lib/opkg/status", "rt");
    	if (f) {
 		while (fgets(buf, 256, f)) {
-			if (strstr(buf, "Package: vuplus-dvb-modules")) {
+			if (strstr(buf, "Package: vuplus-dvb-proxy")) {
 				fgets(buf, 256, f);
 				temps = string(buf);
 				pos = temps.find(' ');
